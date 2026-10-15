@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Java compiled files
+*.class
+out/
+build/
+target/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Generated test logs
+*.log

@@ -1,0 +1,90 @@
+A4 COMPLETE TEST SUMMARY
+================================================================================
+Assertion-based validation repetitions: 1
+Configuration/stress repetitions per test: 5
+Total executions: 65
+
+01. Safe Duplicate
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 0/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=1, approval=1, invoice=1, duplicates=1, out-of-order=0
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+02. Safe Out-of-Order 250
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 5/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=250, approval=250, invoice=250, duplicates=0, out-of-order=250
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+03. Safe Out-of-Order 1000
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 5/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=1000, approval=1000, invoice=1000, duplicates=0, out-of-order=1000
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+04. Safe Duplicate Storm
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 0/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=250, approval=250, invoice=250, duplicates=250, out-of-order=0
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+05. Unsafe Combined Stress
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 5/5 runs; duplicate failure in 5/5; out-of-order failure in 5/5
+   Average counts: enrollment=1000, approval=1000, invoice=1000, duplicates=1000, out-of-order=1085.40
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+06. Out-of-Order Execution
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 5/5 runs; duplicate failure in 5/5; out-of-order failure in 5/5
+   Average counts: enrollment=250, approval=250, invoice=250, duplicates=250, out-of-order=250.20
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+07. Livelock-Like Duplicate Churn
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 0/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=250, approval=250, invoice=250, duplicates=250, out-of-order=0
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+08. Missed-Signal Simulation
+   Runs: 5 | Completed: 0 | Timeouts: 5 | Other failures: 0
+   Async failure observed in 0/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=NA, approval=NA, invoice=NA, duplicates=NA, out-of-order=NA
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+09. Deadlock-Like Lock Stall
+   Runs: 5 | Completed: 0 | Timeouts: 5 | Other failures: 0
+   Async failure observed in 0/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=NA, approval=NA, invoice=NA, duplicates=NA, out-of-order=NA
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+10. Duplicate Completion
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 5/5 runs; duplicate failure in 5/5; out-of-order failure in 0/5
+   Average counts: enrollment=1, approval=1, invoice=1, duplicates=1, out-of-order=0
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+11. Premature Finalization
+   Runs: 5 | Completed: 0 | Timeouts: 5 | Other failures: 0
+   Async failure observed in 0/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=NA, approval=NA, invoice=NA, duplicates=NA, out-of-order=NA
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+12. Transient Failure Retry
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 0/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=3, approval=3, invoice=3, duplicates=0, out-of-order=0
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+13. Concurrent Duplicate Producer Race
+   Runs: 5 | Completed: 5 | Timeouts: 0 | Other failures: 0
+   Async failure observed in 0/5 runs; duplicate failure in 0/5; out-of-order failure in 0/5
+   Average counts: enrollment=3, approval=3, invoice=3, duplicates=3, out-of-order=0
+   Elapsed ms: avg=NA, min=NA, max=NA
+
+INTERPRETATION GUIDE
+- A timeout in Test 09 is expected evidence of the lock-stall demonstration.
+- Async failures in unsafe tests are expected evidence of broken coordination.
+- Safe tests should complete without ASYNC FAILURE markers.
+- Enrollment/approval/invoice mismatches can indicate abandoned or premature work.
+- Variation between repeated runs is evidence of timing-dependent concurrency behavior.
